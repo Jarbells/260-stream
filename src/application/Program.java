@@ -21,5 +21,8 @@ public class Program {
 		
 		Stream<Long> st4 = Stream.iterate(new Long[]{ 0L, 1L }, p->new Long[]{ p[1], p[0]+p[1] }).map(p -> p[0]);
 		System.out.println(Arrays.toString(st4.limit(20).toArray()));
-    }
+		
+		Stream<Integer> st5 = Stream.iterate(new Integer[] {0, 1}, x -> new Integer[] {x[1], x[0] + x[1]}).map(x -> x[0]);
+		System.out.println(Arrays.toString(st5.limit(30).toArray()));
+	}
 }
